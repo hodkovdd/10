@@ -39,14 +39,14 @@ namespace Lesson10_dz
             {
                 int damage = attack - this.Defence;
                 Health -= damage;
-                Console.WriteLine("Damage is {0}, {1}'s health remains {2}", damage, this.Name, this.Health);
+                Console.WriteLine("{1} got {0} damage, his health remains {2}", damage, this.Name, this.Health);
             }
             else
                 Console.WriteLine(" dodged!");
         }
         public override void Attack(Fighter fighter)
         {
-            int attack = rnd.Next(Strength - 1, Strength + 1);
+            int attack = rnd.Next(Strength, Strength + 2);
             int doubleAttack = rnd.Next(0, 2);
             fighter.DefenceAction(attack);
             if (doubleAttack == 1)
@@ -65,11 +65,11 @@ namespace Lesson10_dz
         {
             int damage = attack - this.Defence;
             Health -= damage;
-            Console.WriteLine("Damage is {0}, {1}'s health remains {2}", damage, this.Name, this.Health);
+            Console.WriteLine("{1} got {0} damage, his health remains {2}", damage, this.Name, this.Health);
         }
         public override void Attack(Fighter fighter)
         {
-            int attack = rnd.Next(Strength - 1, Strength + 1);
+            int attack = rnd.Next(Strength, Strength + 1);
             fighter.DefenceAction(attack*2);
         }
     }
@@ -124,7 +124,7 @@ namespace Lesson10_dz
                 Console.WriteLine("Next fight starts!");
             }
             
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }
