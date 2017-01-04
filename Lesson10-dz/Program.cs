@@ -120,6 +120,8 @@ namespace Lesson10_dz
                 Console.Write("again? (y/n) ");
                 if (Console.ReadLine() == "n")
                     break;
+                Console.WriteLine();
+                Console.WriteLine("Next fight starts!");
             }
             
             Console.ReadLine();
